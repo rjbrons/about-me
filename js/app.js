@@ -12,12 +12,14 @@ let userAnswers = [];
 for (let x = 0; x < questions.length; x++) {
   while (!userAnswers[x]) {
     userAnswers[x] = prompt(questions[x]);
+    console.log('User input was: ' + userAnswers[x]);
     if (!answerChoices.includes(userAnswers[x].toLowerCase())) {
       alert('You must answer with yes/no or y/n.');
       userAnswers[x] = null;
     }
   }
 }
+console.log('Final user answers to questions - ');
 for (let x = 0; x < questions.length; x++) {
   console.log(questions[x] + ': ' + userAnswers[x]);
 }
