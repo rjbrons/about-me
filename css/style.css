@@ -1,0 +1,13 @@
+.personalInfo {
+  margin: 2px;
+  float: left;
+  border: thin black solid;
+  width: 55%;
+  height: 100px;
+}
+
+#quiz {
+  border: thin black solid;
+  width: 40%;
+  float: right;
+}
