@@ -1,11 +1,11 @@
 'use strict';
 
 let questions = [
-  'Do I drive a truck?',
+  'Have I been to Germany?',
+  'Do I ride motorcycles?',
   'Do I like Dungeons and Dragons?',
-  'Have I been out of the country?',
   'Have I ever been divorced?',
-  'Do I like grapefruit?'
+  'Do I like avocados?'
 ];
 
 let answerChoices = ['yes', 'no', 'y', 'n'];
@@ -14,9 +14,9 @@ let correctAnswers = [
   ['yes', 'y'],
   ['yes', 'y'],
   ['no', 'n'],
-  ['yes', 'y']
+  ['no', 'n']
 ];
-let userName = prompt("Hello.  Let's play a trivia game.  What is your name?");
+let userName = prompt('Hello.  Let\'s play a trivia game.  What is your name?');
 let userAnswers = [];
 let correctGuesses = 0;
 
