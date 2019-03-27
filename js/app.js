@@ -7,8 +7,10 @@ let questions = [
   'Have I ever been divorced?',
   'Do I like grapefruit?'
 ];
+
 let answerChoices = ['yes', 'no', 'y', 'n'];
 let userAnswers = [];
+
 for (let x = 0; x < questions.length; x++) {
   while (!userAnswers[x]) {
     userAnswers[x] = prompt(questions[x]);
@@ -19,6 +21,7 @@ for (let x = 0; x < questions.length; x++) {
     }
   }
 }
+
 console.log('Final user answers to questions - ');
 for (let x = 0; x < questions.length; x++) {
   console.log(questions[x] + ': ' + userAnswers[x]);
