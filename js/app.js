@@ -55,14 +55,22 @@ for (let x = 0; x < questions.length; x++) {
 
 //Countries I have been in guessing game.
 let countryTries = 0;
-while (countryTries < 4) {
+let allCountriesMessage = '  The possible answers were: ';
+for (let i = 0; i < countries.length; i++) {
+  if (i === 0) {
+    allCountriesMessage += countries[i];
+  } else {
+    allCountriesMessage += ', ' + countries[i];
+  }
+}
+while (countryTries < 6) {
   countryGuess = prompt(
-    'I have been in several other countries, can you guess one? (You have 4 tries to answer the question.)'
+    'I have been in several other countries, can you guess one? (You have 6 tries to answer the question.)'
   );
   if (countries.includes(countryGuess.toLowerCase())) {
-    alert(
-      'Congratulations ' + userName + ' I have been to ' + countryGuess + '.'
-    );
+    let alertMessage =
+      'Congratulations ' + userName + ' I have been to ' + countryGuess + '.';
+    alert(alertMessage + allCountriesMessage);
     correctGuesses++;
     break;
   } else {
@@ -78,6 +86,12 @@ while (countryTries < 4) {
     );
   }
 }
+if (countryTries === 6) {
+  alert(
+    'Too bad you did not guess one of the countries I have been to.' +
+      allCountriesMessage
+  );
+}
 
 //Guess a number
 let highLowCorrection;
@@ -85,9 +99,9 @@ let numberGuessCount = 0;
 let myNumber = Math.floor(Math.random() * 20) + 1;
 console.log(myNumber);
 alert(
-  'I have rolled a 20 sided die.  You must guess the number.  You have 6 tries.'
+  'I have rolled a 20 sided die.  You must guess the number.  You have 4 tries.'
 );
-while (numberGuessCount < 6) {
+while (numberGuessCount < 4) {
   var userNumberGuess = parseInt(prompt('What is your guess?'));
   numberGuessCount++;
   console.log('Guess count: ' + numberGuessCount);
