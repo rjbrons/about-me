@@ -6,6 +6,10 @@ h1 {
   font-weight: bold;
 }
 
+div {
+  padding: 10px;
+}
+
 ul {
   list-style-type: square;
   list-style-position: inside;
@@ -27,11 +31,6 @@ footer {
   color: gold;
 }
 
-.title {
-  font-weight: bold;
-  font-size: 1.2em;
-  text-decoration-line: underline;
-}
 .personalInfo {
   margin: 2px;
   float: left;
@@ -39,6 +38,15 @@ footer {
   width: 55%;
 }
 
+.personalInfo span {
+  display: block;
+}
+.title {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration-line: underline;
+}
 #quiz {
   border: thin black solid;
   width: 40%;
