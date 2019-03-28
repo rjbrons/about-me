@@ -44,7 +44,7 @@ for (let x = 0; x < questions.length; x++) {
     }
   }
 
-  if (correctAnswers[x].includes(userAnswers[x])) {
+  if (correctAnswers[x].includes(userAnswers[x].toLowerCase())) {
     validationStatement = 'correct!';
     correctGuesses++;
   } else {
@@ -81,7 +81,7 @@ while (countryTries < 6) {
         ' I have not been to ' +
         countryGuess +
         '.  You have ' +
-        (4 - countryTries) +
+        (6 - countryTries) +
         ' more guesses.'
     );
   }
@@ -121,7 +121,7 @@ while (numberGuessCount < 4) {
       ' that guess was too ' +
       highLowCorrection +
       ' try again.  You have ' +
-      (6 - numberGuessCount) +
+      (4 - numberGuessCount) +
       ' tries left.'
   );
 }
