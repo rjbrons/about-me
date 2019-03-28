@@ -8,6 +8,16 @@ let questions = [
   'Do I like avocados?'
 ];
 
+let countries = [
+  'Ireland',
+  'Spain',
+  'Mexico',
+  'Canada',
+  'Afghanistan',
+  'Iraq',
+  'Kuwait',
+  'Kyrgyzstan'
+];
 let answerChoices = ['yes', 'no', 'y', 'n'];
 let correctAnswers = [
   ['no', 'n'],
@@ -16,9 +26,10 @@ let correctAnswers = [
   ['no', 'n'],
   ['no', 'n']
 ];
-let userName = prompt('Hello.  Let\'s play a trivia game.  What is your name?');
+let userName = prompt(`Hello.  Let's play a trivia game.  What is your name?`);
 let userAnswers = [];
 let correctGuesses = 0;
+let countryGuess;
 
 for (let x = 0; x < questions.length; x++) {
   let validationStatement = '';
@@ -38,6 +49,33 @@ for (let x = 0; x < questions.length; x++) {
     validationStatement = 'incorrect.';
   }
   alert('You answered ' + userAnswers[x] + '.  That is ' + validationStatement);
+}
+
+//Countries I have been in guessing game.
+let countryTrue;
+let countryTries = 0;
+while (!countryTrue && countryTries < 4) {
+  countryGuess = prompt(
+    'I have been in several other countries, can you guess one? (You have 4 tries to answer the question.)'
+  );
+  if (countries.includes(countryGuess)) {
+    countryTrue = true;
+    alert(
+      'Congratulations ' + userName + ' I have been to ' + countryGuess + '.'
+    );
+    correctGuesses++;
+  } else {
+    countryTries++;
+    alert(
+      'Sorry, ' +
+        userName +
+        'I have not been to ' +
+        countryGuess +
+        '.  You have ' +
+        (4 - countryTries) +
+        ' more guesses.'
+    );
+  }
 }
 
 alert(
