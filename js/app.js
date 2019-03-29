@@ -36,7 +36,6 @@ function guessingGame() {
         userAnswers[x] = null;
       }
     }
-
     if (correctAnswers[x].includes(userAnswers[x].toLowerCase())) {
       validationStatement = 'correct!';
       correctGuesses++;
