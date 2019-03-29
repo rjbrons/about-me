@@ -2,6 +2,13 @@
 
 let userName = prompt(`Hello.  Let's play a trivia game.  What is your name?`);
 let correctGuesses = 0;
+let questions = [
+  'Have I been to Germany?',
+  'Do I ride motorcycles?',
+  'Do I like Dungeons and Dragons?',
+  'Have I ever been divorced?',
+  'Do I like avocados?'
+];
 
 guessingGame();
 countriesGame();
@@ -9,13 +16,6 @@ numbersGame();
 showResults();
 
 function guessingGame() {
-  let questions = [
-    'Have I been to Germany?',
-    'Do I ride motorcycles?',
-    'Do I like Dungeons and Dragons?',
-    'Have I ever been divorced?',
-    'Do I like avocados?'
-  ];
   let correctAnswers = [
     ['no', 'n'],
     ['yes', 'y'],
@@ -36,17 +36,18 @@ function guessingGame() {
         userAnswers[x] = null;
       }
     }
-  
+
     if (correctAnswers[x].includes(userAnswers[x].toLowerCase())) {
       validationStatement = 'correct!';
       correctGuesses++;
     } else {
       validationStatement = 'incorrect.';
     }
-    alert('You answered ' + userAnswers[x] + '.  That is ' + validationStatement);
+    alert(
+      'You answered ' + userAnswers[x] + '.  That is ' + validationStatement
+    );
   }
 }
-
 
 //Countries I have been in guessing game.
 function countriesGame() {
