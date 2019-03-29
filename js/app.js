@@ -14,7 +14,6 @@ guessingGame();
 countriesGame();
 numbersGame();
 showResults();
-
 function guessingGame() {
   let correctAnswers = [
     ['no', 'n'],
